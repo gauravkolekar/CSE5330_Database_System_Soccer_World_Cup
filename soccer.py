@@ -10,8 +10,9 @@ import warnings
 warnings.filterwarnings('ignore','Unknown table.*')
 #MySQLdb throws warning and halts program when it tries to drop table that doesn't exsist, this helps us to supress those warnings
 import csv
-
-db = MySQLdb.connect(host="127.0.0.1", port=3306, user="root", passwd="password", db="SOCCER")
+#Importing csv to read the dataset
+from configuration import database_configurations as db
+#db = MySQLdb.connect(host="127.0.0.1", port=3306, user="root", passwd="password", db="SOCCER")
 #connecting to the database
 
 cur = db.cursor()
@@ -108,8 +109,6 @@ add_foreign_key_player_assist_goals_sql = """ALTER TABLE PLAYER_ASSIST_GOALS
                                              REFERENCES PLAYERS(Player_id);"""
 cur.execute(add_foreign_key_player_assist_goals_sql)
 #adding the foriegn key to PLAYER_ASSIST_GOALS table
-
-
 
 db.close()
 #closing database connection
