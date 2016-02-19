@@ -1,0 +1,13 @@
+mysql> source D:\Database_systems\Input_Data_Project1_Spring_2016\Table_creation.sql
+Database changed
+Query OK, 0 rows affected (2.92 sec)
+
+Query OK, 0 rows affected (0.48 sec)
+
+Query OK, 0 rows affected (0.49 sec)
+
+Query OK, 0 rows affected (0.47 sec)
+
+Query OK, 0 rows affected (0.38 sec)
+
+mysql> \t
