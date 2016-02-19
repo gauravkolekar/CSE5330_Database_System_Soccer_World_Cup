@@ -19,8 +19,6 @@ data = cur.fetchone()
 print "Database version: ",str(data)
 #printing the database version
 
-
-
 csv_file_handler = open("Country.csv","rb")
 csv_reader = csv.reader(csv_file_handler.read().strip().splitlines())
 
@@ -80,5 +78,38 @@ for row in csv_reader:
 db.commit()
 print "MATCH_RESULTS table populated ..."
 #populated the MATCH_RESULTS table
+
+csv_file_handler = open("Player_Cards.csv","rb")
+csv_reader = csv.reader(csv_file_handler.read().strip().splitlines())
+
+for row in csv_reader:
+    #print row
+    data_player_id = int(row[0])
+    data_no_of_yellow_card = int(row[1])
+    data_no_of_red_card = int(row[2])
+    #print data_player_id,data_no_of_yellow_card,data_no_of_red_card
+    sql_insert_query = "INSERT INTO PLAYER_CARD VALUES(%d,%d,%d)"%(data_player_id,data_no_of_yellow_card,data_no_of_red_card)
+    cur.execute(sql_insert_query)
+db.commit()
+print "PLAYER_CARDS table populated ..."
+#populated the PLAYER_CARD table
+
+csv_file_handler = open("Player_Assists_Goals.csv","rb")
+csv_reader = csv.reader(csv_file_handler.read().strip().splitlines())
+
+for row in csv_reader:
+    #print row
+    data_player_id = int(row[0])
+    data_no_of_matches = int(row[1])
+    data_goals = int(row[2])
+    data_assists = int(row[3])
+    data_minutes_played = int(row[4])
+    #print data_player_id, data_no_of_matches,data_goals,data_assists,data_minutes_played
+    sql_insert_query = "INSERT INTO PLAYER_ASSISTS_GOALS VALUES(%d,%d,%d,%d,%d)"%(data_player_id, data_no_of_matches,data_goals,data_assists,data_minutes_played)
+    cur.execute(sql_insert_query)
+db.commit()
+print "PLAYER_ASSISTS_GOALS table populated ..."
+#populated the COUNTRY table
+
 db.close()
 #closing database connection
