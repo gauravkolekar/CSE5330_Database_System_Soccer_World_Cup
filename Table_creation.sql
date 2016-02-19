@@ -1,7 +1,7 @@
 use db1;
 
 
-CREATE TABLE country1(
+CREATE TABLE country(
  country_name       VARCHAR(20)
 ,population         DECIMAL(10,2)
 ,no_of_worldcup_won INT
@@ -10,24 +10,24 @@ CREATE TABLE country1(
 );
 
 
-CREATE TABLE players1
+CREATE TABLE players
 (
  player_id int
-,name1 VARCHAR(40)
+,name VARCHAR(40)
 ,fname VARCHAR(20)
 ,lname VARCHAR(35)
 ,dob DATE  
 ,country VARCHAR(20)
 ,height INT
 ,club VARCHAR(30)
-,position1 VARCHAR(10)
+,position VARCHAR(10)
 ,caps_for_country INT
 ,is_captain BOOLEAN
 ,PRIMARY KEY(player_id)
 ,FOREIGN KEY(country) REFERENCES country(country_name)
 );
 
-CREATE TABLE match_results1
+CREATE TABLE match_results
 (
  match_id int
 ,date_of_match DATE
@@ -43,7 +43,7 @@ CREATE TABLE match_results1
 ,FOREIGN KEY(team2) REFERENCES country(country_name)
 );
 
-CREATE TABLE player_card1
+CREATE TABLE player_card
 (
  player_id INT
 ,no_of_yellow_cards INT
@@ -52,7 +52,7 @@ CREATE TABLE player_card1
 ,FOREIGN KEY(player_id) REFERENCES players(player_id)
 );
 
-CREATE TABLE player_assists_goals1
+CREATE TABLE player_assists_goals
 (
  player_id INT	
 ,no_of_matches INT
