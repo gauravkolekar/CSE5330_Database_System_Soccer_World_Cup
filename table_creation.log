@@ -1,0 +1,15 @@
+mysql> source C:\Users\Gaurav Kolekar\PycharmProjects\CSE5330Database_System_Project1\Table_creation.sql
+Database changed
+Query OK, 0 rows affected (0.22 sec)
+
+Query OK, 0 rows affected (0.05 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 0 rows affected (0.09 sec)
+
+Query OK, 0 rows affected (0.07 sec)
+
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> \t

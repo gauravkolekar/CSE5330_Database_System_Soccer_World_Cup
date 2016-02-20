@@ -1,4 +1,6 @@
-use db1;
+use SOCCER;
+
+DROP TABLE  player_assists_goals,player_card,match_results,players,country;
 
 
 CREATE TABLE country(
