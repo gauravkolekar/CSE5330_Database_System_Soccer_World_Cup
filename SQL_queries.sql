@@ -8,7 +8,7 @@ WHERE
     position = 'Midfielder' AND
     country = 'USA';
 
--- 2. rows 736
+-- 2. rows 32
 SELECT 
     name, club, country, TIMESTAMPDIFF(YEAR, dob, CURDATE()) AS age
 FROM

@@ -54,9 +54,9 @@ for row in csv_reader:
     data_club = row[7]
     data_position = row[8]
     data_caps_for_country = int(row[9])
-    data_is_captain = bool(row[10])
+    data_is_captain = row[10]
     #print data_player_id,data_name,data_fname,data_lname,data_dob,data_country,data_height,data_club,data_position,data_caps_for_country,data_is_captain
-    sql_insert_query = "INSERT INTO PLAYERS VALUES(%d,%s,%s,%s,%s,%s,%d,%s,%s,%d,%d)"%(data_player_id,data_name,data_fname,data_lname,data_dob,data_country,data_height,data_club,data_position,data_caps_for_country,data_is_captain)
+    sql_insert_query = "INSERT INTO PLAYERS VALUES(%d,%s,%s,%s,%s,%s,%d,%s,%s,%d,%s)"%(data_player_id,data_name,data_fname,data_lname,data_dob,data_country,data_height,data_club,data_position,data_caps_for_country,data_is_captain)
     cur.execute(sql_insert_query)
     row_affected = row_affected + 1
 db.commit()
