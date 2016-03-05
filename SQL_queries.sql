@@ -1,5 +1,5 @@
 /* Queries  */
--- 1.
+-- 1. rows 8
 SELECT 
     name, club, country
 FROM
@@ -8,7 +8,7 @@ WHERE
     position = 'Midfielder' AND
     country = 'USA';
 
--- 2.
+-- 2. rows 736
 SELECT 
     name, club, country, TIMESTAMPDIFF(YEAR, dob, CURDATE()) AS age
 FROM
@@ -16,7 +16,7 @@ FROM
 WHERE
     is_captain = 1;
 
--- 3. 
+-- 3. rows 3
 SELECT 
     country_name
 FROM
@@ -66,14 +66,14 @@ WHERE
         FROM
             player_card);
 
--- 8.  
+-- 8.  rows 12
 SELECT 
     host_city, COUNT(*) number_games
 FROM
     match_results
 GROUP BY host_city;
 
--- 9.   
+-- 9.   rows 2
 select host_city from (
 select host_city, count(*) games_played 
   from match_results 
@@ -96,56 +96,51 @@ FROM
     match_results
 GROUP BY team2;
 
--- 12  
+-- 12. rows 128
+create table t1 as(
+select team1 country_name, count(team1) number_games,sum(team1_score) total_goals_for,sum(team2_score) total_goals_against
+from match_results 
+group by team1);
 
--- incorrect once
+create table t2 as (
+select team2 country_name, count(team2) number_games,sum(team2_score) total_goals_for,sum(team1_score) total_goals_against
+from match_results 
+group by team2);
+
+create table t as
+select * from t1
+union
+select * from t2;
+
 create view team_summary as
-select country_name, number_games, total_goals_for, total_goals_against from
-(select team1 country_name, count(team1) number_games,sum(team1_score) total_goals_for,sum(team2_score) total_goals_against
-from match_results 
-group by team1
-union
-select team2 country_name, count(team2) number_games,sum(team2_score) total_goals_for,sum(team1_score) total_goals_against
-from match_results 
-group by team2) t_union
-order by number_games desc;
+select country_name AS CountryName,sum(number_games) AS NoOfGames, sum(total_goals_for) AS TotalGoalsFor,sum(total_goals_against) AS TotalGoalsAgainst
+from t
+group by CountryName
+order by NoOfGames desc;
 
---  correct one
-create or replace view team_summary as
-select country_name AS CountryName,sum(total_goals_for) AS NoOfGames, sum(total_goals_against) AS TotalGoalsFor,sum(number_games) AS TotalGoalsAgainst from
-(select team1 country_name, count(team1) number_games,sum(team1_score) total_goals_for,sum(team2_score) total_goals_against
-from match_results 
-group by team1
-union
-select team2 country_name, count(team2) number_games,sum(team2_score) total_goals_for,sum(team1_score) total_goals_against
-from match_results 
-group by team2) t_union
-group by country_name
-order by number_games desc
-
--- 13   
-select country_name, sum(number_games) 
+-- 13. rows 32
+select CountryName, sum(NoOfGames) 
 from team_summary
-group by country_name;
+group by CountryName;
 
--- 14   
+-- 14. rows 4
 SELECT 
-    country_name
+    CountryName
 FROM
     (SELECT 
-        country_name, SUM(number_games) games_played
+        CountryName, SUM(NoOfGames) games_played
     FROM
         team_summary
-    GROUP BY country_name) t2
+    GROUP BY CountryName) t2
 WHERE
     games_played IN (SELECT 
             MAX(games_played)
         FROM
             (SELECT 
-                country_name, SUM(number_games) games_played
+                CountryName, SUM(NoOfGames) games_played
             FROM
                 team_summary
-            GROUP BY country_name) t1);
+            GROUP BY CountryName) t1);
 					   
 -- 15  64 rows and no winning_team_score in negative 
 SELECT 
@@ -208,3 +203,10 @@ INSERT INTO match_results VALUES(65,"2014-7-31","13:00:00","India","Brazil",2,1,
 INSERT INTO player_card VALUES(38665,1,0);
 -- 5.
 INSERT INTO player_assists_goals VALUES(38665,1,1,1,90);
+
+
+DELETE FROM player_assists_goals WHERE player_id = 38665;
+DELETE FROM player_card WHERE player_id = 38665;
+DELETE FROM match_results WHERE match_id = 65;
+DELETE FROM players WHERE player_id = 38665;
+DELETE FROM country WHERE country_name = "India";
