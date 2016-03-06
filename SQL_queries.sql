@@ -74,22 +74,29 @@ FROM
 GROUP BY host_city;
 
 -- 9.   rows 2
-select host_city from (
-select host_city, count(*) games_played 
-  from match_results 
-group by host_city
+SELECT host_city
+FROM (
+SELECT host_city, COUNT(*) games_played
+FROM match_results
+GROUP BY host_city
 ) t123
-where games_played in (select max(games_played) from (select host_city, count(*) games_played 
-														from match_results 
-													group by host_city) t321
-						)							
+WHERE games_played IN (
+SELECT MAX(games_played)
+FROM (
+SELECT host_city, COUNT(*) games_played
+FROM match_results
+GROUP BY host_city) t321
+);
 
--- 10. 32 rows with Brazil having 13 goals against team2  
-select team1, count(team1) AS number_of_games_played_as_team1,sum(team1_score),sum(team2_score) 
-from match_results 
-group by team1;
+-- 10. 32 rows
+select 
+	team1, count(team1) AS number_of_games_played_as_team1, sum(team1_score), sum(team2_score) 
+from
+	match_results 
+group by
+	team1;
 
--- 11 32 rows with Netherlands having 11 goals against team1
+-- 11 32 rows
 SELECT 
     team2, COUNT(team2) AS number_of_games_played_as_team2, SUM(team2_score), SUM(team1_score)
 FROM
@@ -142,7 +149,7 @@ WHERE
                 team_summary
             GROUP BY CountryName) t1);
 					   
--- 15  64 rows and no winning_team_score in negative 
+-- 15.  64 rows and no winning_team_score in negative 
 SELECT 
     date_of_match, team1, team2,
     IF(team1_score > team2_score,
@@ -153,17 +160,17 @@ SELECT
         team2_score - team1_score) goal_difference
 FROM
     match_results;
-	
---16. 5 rows returned 
-(select * 
+
+-- 16. 5 rows 
+select * 
   from match_results
   where team1 = 'Argentina'
-    and team1_score > team2_score)
+    and team1_score > team2_score
 union  
-(select * 
+select * 
   from match_results
   where team2 = 'Argentina'
-    and team2_score > team1_score);
+    and team2_score > team1_score;
 	
 -- 17.  116 rows 
 SELECT 

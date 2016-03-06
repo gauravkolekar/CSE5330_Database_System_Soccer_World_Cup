@@ -1,0 +1,1086 @@
+mysql> use soccer;
+Database changed
+mysql> source C:\Users\Gaurav Kolekar\PycharmProjects\CSE5330Database_System_Project1\SQL_queries.sql
++------------------+----------------------+---------+
+| name             | club                 | country |
++------------------+----------------------+---------+
+| KYLE BECKERMAN   | Real Salt Lake       | USA     |
+| BRAD DAVIS       | Houston Dynamo       | USA     |
+| JERMAINE JONES   | Besiktas JK          | USA     |
+| MICHAEL BRADLEY  | Toronto FC           | USA     |
+| ALEJANDRO BEDOYA | FC Nantes            | USA     |
+| MIX DISKERUD     | Rosenborg BK         | USA     |
+| GRAHAM ZUSI      | Sporting Kansas City | USA     |
+| JULIAN GREEN     | FC Bayern Muenchen   | USA     |
++------------------+----------------------+---------+
+8 rows in set (0.00 sec)
+
++---------------------+-------------------------+----------------------+------+
+| name                | club                    | country              | age  |
++---------------------+-------------------------+----------------------+------+
+| MARIO YEPES         | Atalanta Bergamo        | Columbia             |   40 |
+| GIANLUIGI BUFFON    | Juventus FC             | Italy                |   38 |
+| GEORGIOS KARAGOUNIS | Fulham FC               | Greece               |   39 |
+| SAMUEL ETOO         | Chelsea FC              | Cameroon             |   34 |
+| IKER CASILLAS       | Real Madrid CF          | Spain                |   34 |
+| RAFAEL MARQUEZ      | Club Leon               | Mexico               |   37 |
+| NOEL VALLADARES     | CD Olimpia              | Honduras             |   38 |
+| JAVAD NEKOUNAM      | Kuwait SC               | Iran                 |   35 |
+| VINCENT ENYEAMA     | Lille OSC               | Nigeria              |   33 |
+| PHILIPP LAHM        | FC Bayern Muenchen      | Germany              |   32 |
+| MILE JEDINAK        | Crystal Palace FC       | Australia            |   31 |
+| CRISTIANO RONALDO   | Real Madrid CF          | Portugal             |   31 |
+| ANTONIO VALENCIA    | Manchester United FC    | Ecuador              |   30 |
+| CLAUDIO BRAVO       | Real Sociedad           | Chile                |   32 |
+| CLINT DEMPSEY       | Seattle Sounders FC     | USA                  |   32 |
+| ASAMOAH GYAN        | Al Ain FC               | Ghana                |   30 |
+| DARIJO SRNA         | Shakhtar Donetsk        | Croatia              |   33 |
+| DIDIER DROGBA       | Galatasaray SK          | Ivory Coast          |   37 |
+| BRYAN RUIZ          | PSV Eindhoven           | Costa Rica           |   30 |
+| STEVEN GERRARD      | Liverpool FC            | England              |   35 |
+| MADJID BOUGUERRA    | Lekhwiya SC             | Algeria              |   33 |
+| VINCENT KOMPANY     | Manchester City FC      | Belgium              |   29 |
+| EMIR SPAHIC         | Bayer 04 Leverkusen     | Bosnia & Herzegovina |   35 |
+| ROBIN VAN PERSIE    | Manchester United FC    | Netherlands          |   32 |
+| LIONEL MESSI        | FC Barcelona            | Argentina            |   28 |
+| DIEGO LUGANO        | West Bromwich Albion FC | Uruguay              |   35 |
+| GOKHAN INLER        | SSC Napoli              | Switzerland          |   31 |
+| MAKOTO HASEBE       | 1. FC Nuernberg         | Japan                |   32 |
+| THIAGO SILVA        | Paris Saint-Germain FC  | Brazil               |   31 |
+| KOO JACHEOL         | FSV Mainz 05            | South Korea          |   27 |
+| HUGO LLORIS         | Tottenham Hotspur FC    | France               |   29 |
+| ROMAN SHIROKOV      | FC Krasnodar            | Russia               |   34 |
++---------------------+-------------------------+----------------------+------+
+32 rows in set (0.00 sec)
+
++--------------+
+| country_name |
++--------------+
+| Brazil       |
+| Germany      |
+| Italy        |
++--------------+
+3 rows in set (0.00 sec)
+
++----------------------+
+| country_name         |
++----------------------+
+| Algeria              |
+| Australia            |
+| Belgium              |
+| Bosnia & Herzegovina |
+| Cameroon             |
+| Chile                |
+| Columbia             |
+| Costa Rica           |
+| Croatia              |
+| Ecuador              |
+| Ghana                |
+| Greece               |
+| Honduras             |
+| Iran                 |
+| Ivory Coast          |
+| Japan                |
+| Mexico               |
+| Netherlands          |
+| Nigeria              |
+| Portugal             |
+| Russia               |
+| South Korea          |
+| Switzerland          |
+| USA                  |
++----------------------+
+24 rows in set (0.00 sec)
+
++----------------------------+----------------------+
+| name                       | country              |
++----------------------------+----------------------+
+| FARYD MONDRAGON            | Columbia             |
+| GIANLUIGI BUFFON           | Italy                |
+| GEORGIOS KARAGOUNIS        | Greece               |
+| SAMUEL ETOO                | Cameroon             |
+| PEPE REINA                 | Spain                |
+| DAMARCUS BEASLEY           | USA                  |
+| MICHAEL ESSIEN             | Ghana                |
+| ALFREDO TALAVERA           | Mexico               |
+| MARTIN SILVA               | Uruguay              |
+| THIAGO MOTTA               | Italy                |
+| YASUHITO ENDO              | Japan                |
+| XAVI HERNANDEZ             | Spain                |
+| ANDREA PIRLO               | Italy                |
+| ANTONIO CASSANO            | Italy                |
+| NOEL VALLADARES            | Honduras             |
+| MARK BRESCIANO             | Australia            |
+| JOSEPH YOBO                | Nigeria              |
+| TIM HOWARD                 | USA                  |
+| JOHNNY HERRERA             | Chile                |
+| EDISON MENDEZ              | Ecuador              |
+| BOUBACAR BARRY             | Ivory Coast          |
+| KOLO TOURE                 | Ivory Coast          |
+| JULIO CESAR                | Brazil               |
+| STIPE PLETIKOSA            | Croatia              |
+| YOSHITO OKUBO              | Japan                |
+| MAICON SISENANDO           | Brazil               |
+| ALDO RAMIREZ               | Columbia             |
+| JORGE GUAGUA               | Ecuador              |
+| BRAD DAVIS                 | USA                  |
+| MICKAEL LANDREAU           | France               |
+| MIROSLAV KLOSE             | Germany              |
+| PABLO ZABALETA             | Argentina            |
+| CHIGOZIE AGBIM             | Nigeria              |
+| ALEX WILKINSON             | Australia            |
+| CHRISTIAN BOLANOS          | Costa Rica           |
+| ROY MILLER                 | Costa Rica           |
+| ANDRES INIESTA             | Spain                |
+| FERNANDO TORRES            | Spain                |
+| HASSAN YEBDA               | Algeria              |
+| MAXI RODRIGUEZ             | Argentina            |
+| JEFFERSON GALVAO           | Brazil               |
+| WALTER AYOVI               | Ecuador              |
+| SEGUNDO CASTILLO           | Ecuador              |
+| AUSTINE EJIDE              | Nigeria              |
+| NICK RIMANDO               | USA                  |
+| DIEGO PEREZ                | Uruguay              |
+| FRANK LAMPARD              | England              |
+| SHOLA AMEOBI               | Nigeria              |
+| SERGEY IGNASHEVICH         | Russia               |
+| VASILY BEREZUTSKIY         | Russia               |
+| ALEKSANDR KERZHAKOV        | Russia               |
+| HELDER POSTIGA             | Portugal             |
+| IVICA OLIC                 | Croatia              |
+| DIEGO FORLAN               | Uruguay              |
+| VINCENT ENYEAMA            | Nigeria              |
+| ROMAN WEIDENFELLER         | Germany              |
+| JOSE CORONA                | Mexico               |
+| STEPHAN LICHTSTEINER       | Switzerland          |
+| STEVE VON BERGEN           | Switzerland          |
+| DIEGO BENAGLIO             | Switzerland          |
+| LUKAS PODOLSKI             | Germany              |
+| ASHKAN DEJAGAH             | Iran                 |
+| WAYNE ROONEY               | England              |
+| KEVIN PRINCE BOATENG       | Ghana                |
+| MATT MCKAY                 | Australia            |
+| GLEN JOHNSON               | England              |
+| YAYA TOURE                 | Ivory Coast          |
+| EIJI KAWASHIMA             | Japan                |
+| ABEL AGUILAR               | Columbia             |
+| ARTHUR BOKA                | Ivory Coast          |
+| JUNG SUNGRYONG             | South Korea          |
+| DANIEL CAMBRONERO          | Costa Rica           |
+| JEAN MAKOUN                | Cameroon             |
+| EZEQUIEL GARAY             | Argentina            |
+| DAVID SILVA                | Spain                |
+| CESC FABREGAS              | Spain                |
+| MIGUEL VELOSO              | Portugal             |
+| VIEIRINHA DE FREITAS       | Portugal             |
+| CRISTIAN ZAPATA            | Columbia             |
+| LANDRY NGUEMO              | Cameroon             |
+| ADRIAN RAMOS               | Columbia             |
+| FERNANDO GAGO              | Argentina            |
+| CRISTIANO RONALDO          | Portugal             |
+| LUIS SARITAMA              | Ecuador              |
+| CLAUDIO BRAVO              | Chile                |
+| JORGE VALDIVIA             | Chile                |
+| PARK CHUYOUNG              | South Korea          |
+| MAXWELL ANDRADE            | Brazil               |
+| CLINT DEMPSEY              | USA                  |
+| PER MERTESACKER            | Germany              |
+| JUANFRAN BELEN             | Spain                |
+| JAMES MILNER               | England              |
+| ASAMOAH GYAN               | Ghana                |
+| DANIELE DE ROSSI           | Italy                |
+| EUGENE GALEKOVIC           | Australia            |
+| JEAN BEAUSEJOUR            | Chile                |
+| FRANCISCO RODRIGUEZ        | Mexico               |
+| TRANQUILLO BARNETTA        | Switzerland          |
+| PHILIPPE SENDEROS          | Switzerland          |
+| RICARDO COSTA              | Portugal             |
+| BRUNO ALVES                | Portugal             |
+| RAUL MEIRELES              | Portugal             |
+| DANIJEL PRANJIC            | Croatia              |
+| DARIJO SRNA                | Croatia              |
+| KWAK TAEHWI                | South Korea          |
+| AMIRHOSSEIN SADEGHI        | Iran                 |
+| DONIS ESCOBER              | Honduras             |
+| PIERRE WEBO                | Cameroon             |
+| PETER ODEMWINGIE           | Nigeria              |
+| ANDREA BARZAGLI            | Italy                |
+| BETO BASTOS                | Portugal             |
+| HUGO ALMEIDA               | Portugal             |
+| RIO MAVUBA                 | France               |
+| SHUSAKU NISHIKAWA          | Japan                |
+| PATRICK PEMBERTON          | Costa Rica           |
+| WESLEY SNEIJDER            | Netherlands          |
+| IGOR AKINFEEV              | Russia               |
+| GIORGIO CHIELLINI          | Italy                |
+| GUILLERMO OCHOA            | Mexico               |
+| VANGELIS MORAS             | Greece               |
+| LOUKAS VYNTRA              | Greece               |
+| ALBERTO AQUILANI           | Italy                |
+| ANTHONY VANDEN BORRE       | Belgium              |
+| ZVJEZDAN MISIMOVIC         | Bosnia & Herzegovina |
+| YURY ZHIRKOV               | Russia               |
+| ALEXANDER SAMEDOV          | Russia               |
+| IGOR DENISOV               | Russia               |
+| CRISTIAN RODRIGUEZ         | Uruguay              |
+| VALON BEHRAMI              | Switzerland          |
+| RETO ZIEGLER               | Switzerland          |
+| BLERIM DZEMAILI            | Switzerland          |
+| RON VLAAR                  | Netherlands          |
+| RAUL ALBIOL                | Spain                |
+| NICOLAS LOMBAERTS          | Belgium              |
+| THOMAS VERMAELEN           | Belgium              |
+| NIGEL DE JONG              | Netherlands          |
+| GERARD PIQUE               | Spain                |
+| CHARLES ITANDJE            | Cameroon             |
+| CARLOS VALDES              | Columbia             |
+| DIRK KUYT                  | Netherlands          |
+| CARLOS SALCIDO             | Mexico               |
+| MARCELO VIEIRA             | Brazil               |
+| WILLIAN DA SILVA           | Brazil               |
+| MARVIN CHAVEZ              | Honduras             |
+| ORIBE PERALTA              | Mexico               |
+| ORESTIS KARNEZIS           | Greece               |
+| ALEXANDROS TZIOLIS         | Greece               |
+| JAVIER HERNANDEZ           | Mexico               |
+| MAURICIO ISLA              | Chile                |
+| CRISTOPHER TOSELLI         | Chile                |
+| ALEXIS SANCHEZ             | Chile                |
+| DAVID OSPINA               | Columbia             |
+| ALEXANDER MEJIA            | Columbia             |
+| FELIPE CAICEDO             | Ecuador              |
+| MANUEL NEUER               | Germany              |
+| IGNAZIO ABATE              | Italy                |
+| ALESSIO CERCI              | Italy                |
+| EZEQUIEL LAVEZZI           | Argentina            |
+| LIONEL MESSI               | Argentina            |
+| CARLOS CARMONA             | Chile                |
+| GONZALO JARA               | Chile                |
+| JOSE FUENZALIDA            | Chile                |
+| JUAN ZUNIGA                | Columbia             |
+| GABRIEL ACHILIER           | Ecuador              |
+| ALVARO PEREIRA             | Uruguay              |
+| CRISTHIAN STUANI           | Uruguay              |
+| DAVID VILLA                | Spain                |
+| JORGE CLAROS               | Honduras             |
+| EMILIO IZAGUIRRE           | Honduras             |
+| ASMIR BEGOVIC              | Bosnia & Herzegovina |
+| THEOFANIS GEKAS            | Greece               |
+| RODRIGO PALACIO            | Argentina            |
+| TIM KRUL                   | Netherlands          |
+| GABRIEL PALETTA            | Italy                |
+| MASAHIKO INOHA             | Japan                |
+| KEISUKE HONDA              | Japan                |
+| MARCELO DIAZ               | Chile                |
+| MICHAEL BRADLEY            | USA                  |
+| FRED CHAVES GUEDES         | Brazil               |
+| GIOVANI DOS SANTOS         | Mexico               |
+| MUBARAK WAKASO             | Ghana                |
+| CELSO BORGES               | Costa Rica           |
+| RANDALL BRENES             | Costa Rica           |
+| JOZY ALTIDORE              | USA                  |
+| SAMUEL INKOOM              | Ghana                |
+| CARL MEDJANI               | Algeria              |
+| HERNANES VIANA LIMA        | Brazil               |
+| CONSTANT DJAKPA            | Ivory Coast          |
+| LUKA MODRIC                | Croatia              |
+| JOSE ROJAS                 | Chile                |
+| FRANCK RIBERY              | France               |
+| PEJMAN MONTAZERI           | Iran                 |
+| BEN FOSTER                 | England              |
+| MICHEL VORM                | Netherlands          |
+| PAUL VERHAEGH              | Netherlands          |
+| BACARY SAGNA               | France               |
+| VARELA SILVESTRE           | Portugal             |
+| NANI DA CUNHA              | Portugal             |
+| GOKHAN INLER               | Switzerland          |
+| SERGIO ROMERO              | Argentina            |
+| MEHRDAD POOLADI            | Iran                 |
+| GARY MEDEL                 | Chile                |
+| UWA ECHIEJILE              | Nigeria              |
+| JUAN MATA                  | Spain                |
+| EDINSON CAVANI             | Uruguay              |
+| LEE KEUNHO                 | South Korea          |
+| PARK JOOHO                 | South Korea          |
+| LEE CHUNGYONG              | South Korea          |
+| ATSUTO UCHIDA              | Japan                |
+| SHINJI KAGAWA              | Japan                |
+| GIANCARLO GONZALEZ         | Costa Rica           |
+| TOSHIHIRO AOYAMA           | Japan                |
+| DANIEL OPARE               | Ghana                |
+| RUI PATRICIO               | Portugal             |
+| FABIO COENTRAO             | Portugal             |
+| DAVID DE GEA               | Spain                |
+| MARCOS URENA               | Costa Rica           |
+| EDUARDO VARGAS             | Chile                |
+| LUIS GARRIDO               | Honduras             |
+| JAVI MARTINEZ              | Spain                |
+| LUIS SUAREZ                | Uruguay              |
+| CESAR AZPILICUETA          | Spain                |
+| DAVID LUIZ                 | Brazil               |
+| MICHAEL BARRANTES          | Costa Rica           |
+| CARLO COSTLY               | Honduras             |
+| GONZALO HIGUAIN            | Argentina            |
+| EFE AMBROSE                | Nigeria              |
+| DANNY WELBECK              | England              |
+| VICTOR MOSES               | Nigeria              |
+| MAMADOU SAKHO              | France               |
+| KIM SEUNGGYU               | South Korea          |
+| YUN SUKYOUNG               | South Korea          |
+| AGUSTIN ORION              | Argentina            |
+| EMMANUEL AGYEMANG BADU     | Ghana                |
+| YOICHIRO KAKITANI          | Japan                |
+| MANABU SAITO               | Japan                |
+| YUYA OSAKO                 | Japan                |
+| TONI KROOS                 | Germany              |
+| OSCAR BAGUI                | Ecuador              |
+| JORGE FUCILE               | Uruguay              |
+| BRAD GUZAN                 | USA                  |
+| JALAL HOSSEINI             | Iran                 |
+| KIM CHANGSOO               | South Korea          |
+| AURELIEN CHEDJOU           | Cameroon             |
+| CRISTHIAN NOBOA            | Ecuador              |
+| FABIAN ORELLANA            | Chile                |
+| ALVARO GONZALEZ            | Uruguay              |
+| SHINJI OKAZAKI             | Japan                |
+| MATTEO DARMIAN             | Italy                |
+| EHSAN HAJI SAFI            | Iran                 |
+| GERVINHO YAO KOUASSI       | Ivory Coast          |
+| JAMES TROISI               | Australia            |
+| DARIO VIDOSIC              | Australia            |
+| LAURENT CIMAN              | Belgium              |
+| MAROUANE FELLAINI          | Belgium              |
+| KEVIN MIRALLAS             | Belgium              |
+| NICOLAS NKOULOU            | Cameroon             |
+| OUSMANE DIARRASSOUBA       | Ivory Coast          |
+| YUTO NAGATOMO              | Japan                |
+| KIM BOKYUNG                | South Korea          |
+| PARK JONGWOO               | South Korea          |
+| KWADWO ASAMOAH             | Ghana                |
+| ANDRE AYEW                 | Ghana                |
+| JAMES HOLLAND              | Australia            |
+| AHMAD ALNAMEH              | Iran                 |
+| HASHEM BEIKZADEH           | Iran                 |
+| BENJAMIN MOUKANDJO         | Cameroon             |
+| ALEJANDRO BEDOYA           | USA                  |
+| MARIO MARTINEZ             | Honduras             |
+| JUAN CARLOS GARCIA         | Honduras             |
+| EDDER DELGADO              | Honduras             |
+| EL ARABI SOUDANI           | Algeria              |
+| KARIM BENZEMA              | France               |
+| HUGO LLORIS                | France               |
+| MATHIEU VALBUENA           | France               |
+| OSMAN CHAVEZ               | Honduras             |
+| VALENTIN STOCKER           | Switzerland          |
+| OGNJEN VUKOJEVIC           | Croatia              |
+| ROMAN SHIROKOV             | Russia               |
+| SANTI CAZORLA              | Spain                |
+| KONAN YA                   | Ivory Coast          |
+| RAHMAN AHMADI              | Iran                 |
+| JOHN BOYE                  | Ghana                |
+| HENRIQUE ADRIANO BUSS      | Brazil               |
+| SALVATORE SIRIGU           | Italy                |
+| ANTONIO CANDREVA           | Italy                |
+| HA DAESUNG                 | South Korea          |
+| JEREMAIN LENS              | Netherlands          |
+| SIMON MIGNOLET             | Belgium              |
+| AUGUSTO FERNANDEZ          | Argentina            |
+| RUBEN AMORIM               | Portugal             |
+| EDUARDO CARVALHO           | Portugal             |
+| LAZAROS CHRISTODOULOPOULOS | Greece               |
+| MIRALEM PJANIC             | Bosnia & Herzegovina |
+| JEROME BOATENG             | Germany              |
+| LOIC REMY                  | France               |
+| DANIJEL SUBASIC            | Croatia              |
+| DOMAGOJ VIDA               | Croatia              |
+| MENSUR MUJDZA              | Bosnia & Herzegovina |
+| JOE HART                   | England              |
+| PHIL JAGIELKA              | England              |
+| VICTOR FAYZULIN            | Russia               |
+| SENIJAD IBRICIC            | Bosnia & Herzegovina |
+| SEJAD SALIHOVIC            | Bosnia & Herzegovina |
+| EDIN DZEKO                 | Bosnia & Herzegovina |
+| RON-ROBERT ZIELER          | Germany              |
+| ALAN DZAGOEV               | Russia               |
+| MAXIMO BANGUERA            | Ecuador              |
+| SERGIO BUSQUETS            | Spain                |
+| CARLOS PENA                | Mexico               |
+| ALEXANDER DOMINGUEZ        | Ecuador              |
+| ROGER ESPINOZA             | Honduras             |
+| MESUT OEZIL                | Germany              |
+| ABEL HERNANDEZ             | Uruguay              |
+| NICOLAS LODEIRO            | Uruguay              |
+| SEBASTIAN COATES           | Uruguay              |
+| MOHAMED ZEMMAMOUCHE        | Algeria              |
+| GARY CAHILL                | England              |
+| LEIGHTON BAINES            | England              |
+| JOAO ROJAS                 | Ecuador              |
+| MARIANO ANDUJAR            | Argentina            |
+| BENOIT ASSOU EKOTTO        | Cameroon             |
+| KHOSRO HEYDARI             | Iran                 |
+| JASON DAVIDSON             | Australia            |
+| RYAN MCGOWAN               | Australia            |
+| TOMMY OAR                  | Australia            |
+| DANIEL STURRIDGE           | England              |
+| JONATHAN MENSAH            | Ghana                |
+| CIRO IMMOBILE              | Italy                |
+| LEE BUMYOUNG               | South Korea          |
+| OKECHUKWU UCHEBO           | Nigeria              |
+| JORDI ALBA                 | Spain                |
+| CRISTIAN GAMBOA            | Costa Rica           |
+| JOEL CAMPBELL              | Costa Rica           |
+| DIEGO REYES                | Mexico               |
+| MARIO GOETZE               | Germany              |
+| MATTIA PERIN               | Italy                |
+| VICTOR LEANDRO BAGY        | Brazil               |
+| JUAN CUADRADO              | Columbia             |
+| TEOFILO GUTIERREZ          | Columbia             |
+| MATS HUMMELS               | Germany              |
+| FABIAN JOHNSON             | USA                  |
+| HARIS SEFEROVIC            | Switzerland          |
+| MICHAEL BABATUNDE          | Nigeria              |
+| GASTON RAMIREZ             | Uruguay              |
+| OLIVER BOZANIC             | Australia            |
+| ERIC CHOUPO MOTING         | Cameroon             |
+| MIX DISKERUD               | USA                  |
+| JOEL VELTMAN               | Netherlands          |
+| KOKE MERODIO               | Spain                |
+| RICARDO RODRIGUEZ          | Switzerland          |
+| HEINER MORA                | Costa Rica           |
+| JACKSON MARTINEZ           | Columbia             |
+| ESTEBAN PAREDES            | Chile                |
+| KENNETH OMERUO             | Nigeria              |
+| OGENYI ONAZI               | Nigeria              |
+| RAMON AZEEZ                | Nigeria              |
+| SANTIAGO ARIAS             | Columbia             |
+| NIKICA JELAVIC             | Croatia              |
+| ENZO PEREZ                 | Argentina            |
+| MOUSSA SISSOKO             | France               |
+| HENRI BEDIMO               | Cameroon             |
+| FEDERICO FERNANDEZ         | Argentina            |
+| PEDRO RODRIGUEZ            | Spain                |
+| KONSTANTINOS MITROGLOU     | Greece               |
+| GEORGIOS TZAVELAS          | Greece               |
+| MARCO FABIAN               | Mexico               |
+| ELIAQUIM MANGALA           | France               |
+| SOFIANE FEGHOULI           | Algeria              |
+| PANAGIOTIS TACHTSIDIS      | Greece               |
+| DARYL JANMAAT              | Netherlands          |
+| LEROY FER                  | Netherlands          |
+| GEORGINIO WIJNALDUM        | Netherlands          |
+| YANN SOMMER                | Switzerland          |
+| MARIO GAVRANOVIC           | Switzerland          |
+| RODRIGO MUNOZ              | Uruguay              |
+| JOEL MATIP                 | Cameroon             |
+| LEONARDO BONUCCI           | Italy                |
+| XHERDAN SHAQIRI            | Switzerland          |
+| MEDHI LACEN                | Algeria              |
+| MATHEW LECKIE              | Australia            |
+| THOMAS MUELLER             | Germany              |
+| IOANNIS MANIATIS           | Greece               |
+| SHUICHI GONDA              | Japan                |
+| GOTOKU SAKAI               | Japan                |
+| KIM SHINWOOK               | South Korea          |
+| RAIS MBOLHI                | Algeria              |
+| STEPHEN ADAMS              | Ghana                |
+| VINCENT ABOUBAKAR          | Cameroon             |
+| HECTOR HERRERA             | Mexico               |
+| GHASEM HADADIFAR           | Iran                 |
+| HOSSEIN MAHINI             | Iran                 |
+| JACK WILSHERE              | England              |
+| JI DONGWON                 | South Korea          |
+| ANDY NAJAR                 | Honduras             |
+| GIOVANNI SIO               | Ivory Coast          |
+| CARLOS GRUEZO              | Ecuador              |
+| TERENCE KONGOLO            | Netherlands          |
+| MEMPHIS DEPAY              | Netherlands          |
+| CLEMENT GRENIER            | France               |
+| ANTOINE GRIEZMANN          | France               |
+| LUKE SHAW                  | England              |
+| SIME VRSALJKO              | Croatia              |
+| ALAN PULIDO                | Mexico               |
+| DIEGO CALVO                | Costa Rica           |
+| ALEX IBARRA                | Ecuador              |
+| UCHE NWOFOR                | Nigeria              |
+| MASSIMO LUONGO             | Australia            |
+| MATY RYAN                  | Australia            |
+| JOHNNY ACOSTA              | Costa Rica           |
+| CHRIS WONDOLOWSKI          | USA                  |
+| BRAYAN BECKELES            | Honduras             |
+| MATEO KOVACIC              | Croatia              |
+| AHMED MUSA                 | Nigeria              |
+| BAKHTIAR RAHMANI           | Iran                 |
+| ALIREZA HAGHIGHI           | Iran                 |
+| HIROSHI KIYOTAKE           | Japan                |
+| CARLOS BACCA               | Columbia             |
+| VICTOR IBARBO              | Columbia             |
+| ADRIAN BONE                | Ecuador              |
+| JAIMEN AYOVI               | Ecuador              |
+| MICHAEL ARROYO             | Ecuador              |
+| FELIPE GUTIERREZ           | Chile                |
+| RICARDO ALVAREZ            | Argentina            |
+| JOSE MARIA BASANTA         | Argentina            |
+| HIROKI SAKAI               | Japan                |
+| JAVIER AQUINO              | Mexico               |
+| MIGUEL PONCE               | Mexico               |
+| MARCO REUS                 | Germany              |
+| WILFRIED BONY              | Ivory Coast          |
+| MAX GRADEL                 | Ivory Coast          |
+| ADAM KWARASEY              | Ghana                |
+| REZA HAGHIGHI              | Iran                 |
+| ISLAM SLIMANI              | Algeria              |
+| MEHDI MOSTEFA              | Algeria              |
+| ABDELMOUMENE DJABOU        | Algeria              |
+| ALLAN NYOM                 | Cameroon             |
+| LOIC FEUDJOU               | Cameroon             |
+| CHRISTIAN ATSU             | Ghana                |
+| ESSEID BELKALEM            | Algeria              |
+| CEDRIC SI MOHAMMED         | Algeria              |
+| JORDAN HENDERSON           | England              |
+| ALEX OXLADE CHAMBERLAIN    | England              |
+| IZET HAJROVIC              | Bosnia & Herzegovina |
+| MICHAEL LANG               | Switzerland          |
+| ADMIR MEHMEDI              | Switzerland          |
+| FABIAN SCHAER              | Switzerland          |
+| GODFREY OBOABONA           | Nigeria              |
+| HOTARU YAMAGUCHI           | Japan                |
+| HWANG SEOKHO               | South Korea          |
+| HUGO CAMPAGNARO            | Argentina            |
+| BERNARD DUARTE             | Brazil               |
+| ROMAN BUERKI               | Switzerland          |
+| JUAN QUINTERO              | Columbia             |
+| RUBEN GABRIEL              | Nigeria              |
+| AZUBUIKE EGWUEKWE          | Nigeria              |
+| RAUL JIMENEZ               | Mexico               |
+| CHRIS SMALLING             | England              |
+| MITCH LANGERAK             | Australia            |
+| GORDON SCHILDENFELD        | Croatia              |
+| PHIL JONES                 | England              |
+| MATHIEU DEBUCHY            | France               |
+| LAURENT KOSCIELNY          | France               |
+| OLIVIER GIROUD             | France               |
+| JOSE CHOLEVAS              | Greece               |
+| IOANNIS FETFATZIDIS        | Greece               |
+| VLADIMIR GRANAT            | Russia               |
+| ALEXANDER KOKORIN          | Russia               |
+| ASMIR AVDUKIC              | Bosnia & Herzegovina |
+| SENAD LULIC                | Bosnia & Herzegovina |
+| THIBAUT COURTOIS           | Belgium              |
+| NACER CHADLI               | Belgium              |
+| ROMELU LUKAKU              | Belgium              |
+| DRIES MERTENS              | Belgium              |
+| KEVIN DE BRUYNE            | Belgium              |
+| JULIAN DRAXLER             | Germany              |
+| KEVIN GROSSKREUTZ          | Germany              |
+| JORDY CLASIE               | Netherlands          |
+| JASPER CILLESSEN           | Netherlands          |
+| GEORGY SHCHENNIKOV         | Russia               |
+| ALEXEY IONOV               | Russia               |
+| MAKSIM KANUNNIKOV          | Russia               |
+| ANDREY ESHCHENKO           | Russia               |
+| MARCO VERRATTI             | Italy                |
+| LORENZO INSIGNE            | Italy                |
+| SAMMIR CRUZ CAMPOS         | Croatia              |
+| IVAN PERISIC               | Croatia              |
+| LUIS NETO                  | Portugal             |
+| EDER LOPES                 | Portugal             |
+| RAPHAEL VARANE             | France               |
+| STEPHANE RUFFIER           | France               |
+| TONI SUNJIC                | Bosnia & Herzegovina |
+| OGNJEN VRANJES             | Bosnia & Herzegovina |
+| AVDIJA VRSAJEVIC           | Bosnia & Herzegovina |
+| PANAGIOTIS KONE            | Greece               |
+| PANAGIOTIS GLYKOS          | Greece               |
+| CAMILO VARGAS              | Columbia             |
+| GRAHAM ZUSI                | USA                  |
+| REZA GHOOCHANNEJAD         | Iran                 |
+| STEFANOS KAPINO            | Greece               |
+| PAULINHO MACIEL JR.        | Brazil               |
+| FRASER FORSTER             | England              |
+| FAOUZI GHOULAM             | Algeria              |
+| ALBERT ADOMAH              | Ghana                |
+| EMMANUEL EMENIKE           | Nigeria              |
+| JUAN MONTES                | Honduras             |
+| TIMMY CHANDLER             | USA                  |
+| EDIN VISCA                 | Bosnia & Herzegovina |
+| YACINE BRAHIMI             | Algeria              |
+| SAPHIR TAIDER              | Algeria              |
+| SERGEY RYZHIKOV            | Russia               |
+| YURY LODYGIN               | Russia               |
+| ARON JOHANNSSON            | USA                  |
+| FABRICE OLINGA             | Cameroon             |
+| JASMIN FEJZIC              | Bosnia & Herzegovina |
+| MATT BESLER                | USA                  |
+| JEAN DANIEL AKPA           | Ivory Coast          |
+| SYLVAIN GBOHOUO            | Ivory Coast          |
+| DIEGO COSTA                | Spain                |
+| EBENEZER ODUNLAMI          | Nigeria              |
+| RAFA SILVA                 | Portugal             |
+| LUCAS DIGNE                | France               |
+| ADAM TAGGART               | Australia            |
+| DEANDRE YEDLIN             | USA                  |
+| OLIVER ZELENIKA            | Croatia              |
+| IVAN MOCINIC               | Croatia              |
+| JULIAN GREEN               | USA                  |
+| EDER BALANTA               | Columbia             |
+| RONY MARTINEZ              | Honduras             |
+| IVAN FRANJIC               | Australia            |
+| SAMMY NDJOCK               | Cameroon             |
+| RASHID SUMAILA             | Ghana                |
+| SERGE AURIER               | Ivory Coast          |
+| MATHIS BOLLY               | Ivory Coast          |
+| ISAAC BRIZUELA             | Mexico               |
+| MIGUEL LAYUN               | Mexico               |
+| ERMIN BICAKCIC             | Bosnia & Herzegovina |
+| RICKIE LAMBERT             | England              |
+| JOHN BROOKS                | USA                  |
+| ANEL HADZIC                | Bosnia & Herzegovina |
+| ANDRE ALMEIDA              | Portugal             |
+| FIDEL MARTINEZ             | Ecuador              |
+| MARIO MANDZUKIC            | Croatia              |
+| DANIEL VAN BUYTEN          | Belgium              |
+| KIM YOUNGGWON              | South Korea          |
+| FATAWU DAUDA               | Ghana                |
+| SEAD KOLASINAC             | Bosnia & Herzegovina |
+| AISSA MANDI                | Algeria              |
+| WILLIAM CARVALHO           | Portugal             |
+| ISMAEL DIOMANDE            | Ivory Coast          |
+| MARCO PAROLO               | Italy                |
+| BEN HALLORAN               | Australia            |
+| BAILEY WRIGHT              | Australia            |
+| MATTHIAS GINTER            | Germany              |
+| TINO SVEN SUSIC            | Bosnia & Herzegovina |
+| ALIREZA JAHAN BAKHSH       | Iran                 |
+| DANIEL DAVARI              | Iran                 |
+| STEVEN BEITASHOUR          | Iran                 |
+| MIIKO ALBORNOZ             | Chile                |
+| ADNAN JANUZAJ              | Belgium              |
+| DIVOCK ORIGI               | Belgium              |
+| RIYAD MAHREZ               | Algeria              |
+| ERIK DURM                  | Germany              |
+| ACQUAH AFRIYIE             | Ghana                |
+| WAYLON FRANCIS             | Costa Rica           |
+| ANDREY SEMENOV             | Russia               |
+| MARCELO BROZOVIC           | Croatia              |
+| SAYOUBA MANDE              | Ivory Coast          |
+| LUIS LOPEZ                 | Honduras             |
+| CEDRIC DJEUGOUE            | Cameroon             |
+| CHRISTOPH KRAMER           | Germany              |
+| SAMMY BOSSUT               | Belgium              |
++----------------------------+----------------------+
+572 rows in set (0.00 sec)
+
++--------------------------+------------+
+| name                     | country    |
++--------------------------+------------+
+| ALEXANDRE SONG           | Cameroon   |
+| ANTONIO VALENCIA         | Ecuador    |
+| WILSON PALACIOS          | Honduras   |
+| KONSTANTINOS KATSOURANIS | Greece     |
+| PEPE FERREIRA            | Portugal   |
+| MAXIMILIANO PEREIRA      | Uruguay    |
+| STEVEN DEFOUR            | Belgium    |
+| CLAUDIO MARCHISIO        | Italy      |
+| OSCAR DUARTE             | Costa Rica |
+| ANTE REBIC               | Croatia    |
++--------------------------+------------+
+10 rows in set (0.02 sec)
+
++--------------------------+----------------------+
+| name                     | country              |
++--------------------------+----------------------+
+| KONSTANTINOS KATSOURANIS | Greece               |
+| THIAGO SILVA             | Brazil               |
+| VEDAD IBISEVIC           | Bosnia & Herzegovina |
++--------------------------+----------------------+
+3 rows in set (0.02 sec)
+
++----------------+--------------+
+| host_city      | number_games |
++----------------+--------------+
+| Belo Horizonte |            6 |
+| Brasilia       |            7 |
+| Cuiaba         |            4 |
+| Curitiba       |            4 |
+| Fortaleza      |            6 |
+| Manaus         |            4 |
+| Natal          |            4 |
+| Porto Alegre   |            5 |
+| Recife         |            5 |
+| Rio De Janerio |            7 |
+| Salvador       |            6 |
+| Sao Paulo      |            6 |
++----------------+--------------+
+12 rows in set (0.00 sec)
+
++----------------+
+| host_city      |
++----------------+
+| Brasilia       |
+| Rio De Janerio |
++----------------+
+2 rows in set (0.00 sec)
+
++----------------------+---------------------------------+------------------+------------------+
+| team1                | number_of_games_played_as_team1 | sum(team1_score) | sum(team2_score) |
++----------------------+---------------------------------+------------------+------------------+
+| Algeria              |                               1 |                1 |                1 |
+| Argentina            |                               4 |                5 |                1 |
+| Australia            |                               2 |                2 |                6 |
+| Belgium              |                               3 |                5 |                2 |
+| Bosnia & Herzegovina |                               1 |                3 |                1 |
+| Brazil               |                               6 |                7 |               13 |
+| Cameroon             |                               2 |                1 |                8 |
+| Chile                |                               1 |                3 |                1 |
+| Columbia             |                               3 |                7 |                1 |
+| Costa Rica           |                               2 |                1 |                1 |
+| Croatia              |                               1 |                1 |                3 |
+| Ecuador              |                               1 |                0 |                0 |
+| England              |                               1 |                1 |                2 |
+| France               |                               3 |                5 |                1 |
+| Germany              |                               4 |                9 |                3 |
+| Ghana                |                               1 |                1 |                2 |
+| Greece               |                               1 |                2 |                1 |
+| Honduras             |                               2 |                1 |                5 |
+| Iran                 |                               1 |                0 |                0 |
+| Italy                |                               2 |                0 |                2 |
+| Ivory Coast          |                               1 |                2 |                1 |
+| Japan                |                               2 |                1 |                4 |
+| Mexico               |                               1 |                1 |                0 |
+| Netherlands          |                               4 |                4 |                1 |
+| Nigeria              |                               2 |                3 |                3 |
+| Portugal             |                               1 |                2 |                1 |
+| Russia               |                               1 |                1 |                1 |
+| South Korea          |                               2 |                2 |                5 |
+| Spain                |                               2 |                1 |                7 |
+| Switzerland          |                               2 |                4 |                6 |
+| Uruguay              |                               2 |                3 |                4 |
+| USA                  |                               2 |                2 |                3 |
++----------------------+---------------------------------+------------------+------------------+
+32 rows in set (0.00 sec)
+
++----------------------+---------------------------------+------------------+------------------+
+| team2                | number_of_games_played_as_team2 | SUM(team2_score) | SUM(team1_score) |
++----------------------+---------------------------------+------------------+------------------+
+| Algeria              |                               3 |                6 |                6 |
+| Argentina            |                               3 |                3 |                3 |
+| Australia            |                               1 |                1 |                3 |
+| Belgium              |                               2 |                1 |                1 |
+| Bosnia & Herzegovina |                               2 |                1 |                3 |
+| Brazil               |                               1 |                4 |                1 |
+| Cameroon             |                               1 |                0 |                1 |
+| Chile                |                               3 |                3 |                3 |
+| Columbia             |                               2 |                5 |                3 |
+| Costa Rica           |                               3 |                4 |                1 |
+| Croatia              |                               2 |                5 |                3 |
+| Ecuador              |                               2 |                3 |                3 |
+| England              |                               2 |                1 |                2 |
+| France               |                               2 |                5 |                2 |
+| Germany              |                               3 |                9 |                1 |
+| Ghana                |                               2 |                3 |                4 |
+| Greece               |                               3 |                1 |                4 |
+| Honduras             |                               1 |                0 |                3 |
+| Iran                 |                               2 |                1 |                4 |
+| Italy                |                               1 |                2 |                1 |
+| Ivory Coast          |                               2 |                2 |                4 |
+| Japan                |                               1 |                1 |                2 |
+| Mexico               |                               3 |                4 |                3 |
+| Netherlands          |                               3 |               11 |                3 |
+| Nigeria              |                               2 |                0 |                2 |
+| Portugal             |                               2 |                2 |                6 |
+| Russia               |                               2 |                1 |                2 |
+| South Korea          |                               1 |                1 |                1 |
+| Spain                |                               1 |                3 |                0 |
+| Switzerland          |                               2 |                3 |                1 |
+| Uruguay              |                               2 |                1 |                2 |
+| USA                  |                               2 |                3 |                3 |
++----------------------+---------------------------------+------------------+------------------+
+32 rows in set (0.01 sec)
+
+Query OK, 32 rows affected (0.13 sec)
+Records: 32  Duplicates: 0  Warnings: 0
+
+Query OK, 32 rows affected (0.12 sec)
+Records: 32  Duplicates: 0  Warnings: 0
+
+Query OK, 64 rows affected (0.10 sec)
+Records: 64  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.04 sec)
+
++----------------------+----------------+
+| CountryName          | sum(NoOfGames) |
++----------------------+----------------+
+| Algeria              |              4 |
+| Argentina            |              7 |
+| Australia            |              3 |
+| Belgium              |              5 |
+| Bosnia & Herzegovina |              3 |
+| Brazil               |              7 |
+| Cameroon             |              3 |
+| Chile                |              4 |
+| Columbia             |              5 |
+| Costa Rica           |              5 |
+| Croatia              |              3 |
+| Ecuador              |              3 |
+| England              |              3 |
+| France               |              5 |
+| Germany              |              7 |
+| Ghana                |              3 |
+| Greece               |              4 |
+| Honduras             |              3 |
+| Iran                 |              3 |
+| Italy                |              3 |
+| Ivory Coast          |              3 |
+| Japan                |              3 |
+| Mexico               |              4 |
+| Netherlands          |              7 |
+| Nigeria              |              4 |
+| Portugal             |              3 |
+| Russia               |              3 |
+| South Korea          |              3 |
+| Spain                |              3 |
+| Switzerland          |              4 |
+| Uruguay              |              4 |
+| USA                  |              4 |
++----------------------+----------------+
+32 rows in set (0.00 sec)
+
++-------------+
+| CountryName |
++-------------+
+| Argentina   |
+| Brazil      |
+| Germany     |
+| Netherlands |
++-------------+
+4 rows in set (0.00 sec)
+
++---------------+----------------------+----------------------+----------------------+-----------------+
+| date_of_match | team1                | team2                | winning_team         | goal_difference |
++---------------+----------------------+----------------------+----------------------+-----------------+
+| 2014-06-12    | Brazil               | Croatia              | Brazil               |               2 |
+| 2014-06-13    | Mexico               | Cameroon             | Mexico               |               1 |
+| 2014-06-13    | Spain                | Netherlands          | Netherlands          |               4 |
+| 2014-06-13    | Chile                | Australia            | Chile                |               2 |
+| 2014-06-14    | Columbia             | Greece               | Columbia             |               3 |
+| 2014-06-14    | Ivory Coast          | Japan                | Ivory Coast          |               1 |
+| 2014-06-14    | Uruguay              | Costa Rica           | Costa Rica           |               2 |
+| 2014-06-14    | England              | Italy                | Italy                |               1 |
+| 2014-06-15    | Switzerland          | Ecuador              | Switzerland          |               1 |
+| 2014-06-15    | France               | Honduras             | France               |               3 |
+| 2014-06-15    | Argentina            | Bosnia & Herzegovina | Argentina            |               1 |
+| 2014-06-16    | Iran                 | Nigeria              | Nigeria              |               0 |
+| 2014-06-16    | Germany              | Portugal             | Germany              |               4 |
+| 2014-06-16    | Ghana                | USA                  | USA                  |               1 |
+| 2014-06-17    | Belgium              | Algeria              | Belgium              |               1 |
+| 2014-06-17    | Russia               | South Korea          | South Korea          |               0 |
+| 2014-06-17    | Brazil               | Mexico               | Mexico               |               0 |
+| 2014-06-18    | Cameroon             | Croatia              | Croatia              |               4 |
+| 2014-06-18    | Spain                | Chile                | Chile                |               2 |
+| 2014-06-18    | Australia            | Netherlands          | Netherlands          |               1 |
+| 2014-06-19    | Columbia             | Ivory Coast          | Columbia             |               1 |
+| 2014-06-19    | Japan                | Greece               | Greece               |               0 |
+| 2014-06-19    | Uruguay              | England              | Uruguay              |               1 |
+| 2014-06-20    | Italy                | Costa Rica           | Costa Rica           |               1 |
+| 2014-06-20    | Switzerland          | France               | France               |               3 |
+| 2014-06-20    | Honduras             | Ecuador              | Ecuador              |               1 |
+| 2014-06-21    | Argentina            | Iran                 | Argentina            |               1 |
+| 2014-06-21    | Nigeria              | Bosnia & Herzegovina | Nigeria              |               1 |
+| 2014-06-21    | Germany              | Ghana                | Ghana                |               0 |
+| 2014-06-22    | USA                  | Portugal             | Portugal             |               0 |
+| 2014-06-22    | Belgium              | Russia               | Belgium              |               1 |
+| 2014-06-22    | South Korea          | Algeria              | Algeria              |               2 |
+| 2014-06-23    | Cameroon             | Brazil               | Brazil               |               3 |
+| 2014-06-23    | Croatia              | Mexico               | Mexico               |               2 |
+| 2014-06-23    | Australia            | Spain                | Spain                |               3 |
+| 2014-06-23    | Netherlands          | Chile                | Netherlands          |               2 |
+| 2014-06-24    | Japan                | Columbia             | Columbia             |               3 |
+| 2014-06-24    | Greece               | Ivory Coast          | Greece               |               1 |
+| 2014-06-24    | Italy                | Uruguay              | Uruguay              |               1 |
+| 2014-06-24    | Costa Rica           | England              | England              |               0 |
+| 2014-06-25    | Honduras             | Switzerland          | Switzerland          |               3 |
+| 2014-06-25    | Ecuador              | France               | France               |               0 |
+| 2014-06-25    | Nigeria              | Argentina            | Argentina            |               1 |
+| 2014-06-25    | Bosnia & Herzegovina | Iran                 | Bosnia & Herzegovina |               2 |
+| 2014-06-26    | USA                  | Germany              | Germany              |               1 |
+| 2014-06-26    | Portugal             | Ghana                | Portugal             |               1 |
+| 2014-06-26    | South Korea          | Belgium              | Belgium              |               1 |
+| 2014-06-26    | Algeria              | Russia               | Russia               |               0 |
+| 2014-06-28    | Brazil               | Chile                | Chile                |               0 |
+| 2014-06-28    | Columbia             | Uruguay              | Columbia             |               2 |
+| 2014-06-29    | Netherlands          | Mexico               | Netherlands          |               1 |
+| 2014-06-29    | Costa Rica           | Greece               | Greece               |               0 |
+| 2014-06-30    | France               | Nigeria              | France               |               2 |
+| 2014-06-30    | Germany              | Algeria              | Germany              |               1 |
+| 2014-07-01    | Argentina            | Switzerland          | Argentina            |               1 |
+| 2014-07-01    | Belgium              | USA                  | Belgium              |               1 |
+| 2014-07-04    | Brazil               | Columbia             | Brazil               |               1 |
+| 2014-07-04    | France               | Germany              | Germany              |               1 |
+| 2014-07-05    | Netherlands          | Costa Rica           | Costa Rica           |               0 |
+| 2014-07-05    | Argentina            | Belgium              | Argentina            |               1 |
+| 2014-07-08    | Brazil               | Germany              | Germany              |               6 |
+| 2014-07-09    | Netherlands          | Argentina            | Argentina            |               0 |
+| 2014-07-12    | Brazil               | Netherlands          | Netherlands          |               3 |
+| 2014-07-13    | Germany              | Argentina            | Germany              |               1 |
++---------------+----------------------+----------------------+----------------------+-----------------+
+64 rows in set (0.00 sec)
+
++----------+---------------+---------------------+-----------+----------------------+-------------+-------------+---------------------+----------------+
+| match_id | date_of_match | start_time_of_match | team1     | team2                | team1_score | team2_score | stadium_name        | host_city      |
++----------+---------------+---------------------+-----------+----------------------+-------------+-------------+---------------------+----------------+
+|       11 | 2014-06-15    | 19:00:00            | Argentina | Bosnia & Herzegovina |           2 |           1 | Estadio do Maracana | Rio De Janerio |
+|       27 | 2014-06-21    | 13:00:00            | Argentina | Iran                 |           1 |           0 | Estadio Mineirao    | Belo Horizonte |
+|       55 | 2014-07-01    | 13:00:00            | Argentina | Switzerland          |           1 |           0 | Arena de Sao Paulo  | Sao Paulo      |
+|       60 | 2014-07-05    | 13:00:00            | Argentina | Belgium              |           1 |           0 | Estadio Nacional    | Brasilia       |
+|       43 | 2014-06-25    | 13:00:00            | Nigeria   | Argentina            |           2 |           3 | Estadio Beira-Rio   | Porto Alegre   |
++----------+---------------+---------------------+-----------+----------------------+-------------+-------------+---------------------+----------------+
+5 rows in set (0.00 sec)
+
++---------------------------+----------------------+-------+
+| name                      | country              | goals |
++---------------------------+----------------------+-------+
+| JAMES RODRIGUEZ           | Columbia             |     6 |
+| THOMAS MUELLER            | Germany              |     5 |
+| LIONEL MESSI              | Argentina            |     4 |
+| ROBIN VAN PERSIE          | Netherlands          |     4 |
+| NEYMAR SANTOS JR.         | Brazil               |     4 |
+| KARIM BENZEMA             | France               |     3 |
+| ARJEN ROBBEN              | Netherlands          |     3 |
+| ENNER VALENCIA            | Ecuador              |     3 |
+| ANDRE SCHUERRLE           | Germany              |     3 |
+| XHERDAN SHAQIRI           | Switzerland          |     3 |
+| ISLAM SLIMANI             | Algeria              |     2 |
+| ABDELMOUMENE DJABOU       | Algeria              |     2 |
+| ALEXIS SANCHEZ            | Chile                |     2 |
+| LUIS SUAREZ               | Uruguay              |     2 |
+| WILFRIED BONY             | Ivory Coast          |     2 |
+| AHMED MUSA                | Nigeria              |     2 |
+| MEMPHIS DEPAY             | Netherlands          |     2 |
+| GERVINHO YAO KOUASSI      | Ivory Coast          |     2 |
+| DAVID LUIZ                | Brazil               |     2 |
+| TONI KROOS                | Germany              |     2 |
+| JACKSON MARTINEZ          | Columbia             |     2 |
+| BRYAN RUIZ                | Costa Rica           |     2 |
+| IVAN PERISIC              | Croatia              |     2 |
+| MARIO GOETZE              | Germany              |     2 |
+| MARIO MANDZUKIC           | Croatia              |     2 |
+| CLINT DEMPSEY             | USA                  |     2 |
+| OSCAR DOS SANTOS JR.      | Brazil               |     2 |
+| ASAMOAH GYAN              | Ghana                |     2 |
+| MATS HUMMELS              | Germany              |     2 |
+| TIM CAHILL                | Australia            |     2 |
+| ANDRE AYEW                | Ghana                |     2 |
+| MIROSLAV KLOSE            | Germany              |     2 |
+| MESUT OEZIL               | Germany              |     1 |
+| DANIEL STURRIDGE          | England              |     1 |
+| JOEL CAMPBELL             | Costa Rica           |     1 |
+| SON HEUNGMIN              | South Korea          |     1 |
+| OSCAR DUARTE              | Costa Rica           |     1 |
+| JUAN CUADRADO             | Columbia             |     1 |
+| HARIS SEFEROVIC           | Switzerland          |     1 |
+| TEOFILO GUTIERREZ         | Columbia             |     1 |
+| STEFAN DE VRIJ            | Netherlands          |     1 |
+| GRANIT XHAKA              | Switzerland          |     1 |
+| MOUSSA SISSOKO            | France               |     1 |
+| CHARLES ARANGUIZ          | Chile                |     1 |
+| ROMELU LUKAKU             | Belgium              |     1 |
+| DRIES MERTENS             | Belgium              |     1 |
+| KEVIN DE BRUYNE           | Belgium              |     1 |
+| OGNJEN VRANJES            | Bosnia & Herzegovina |     1 |
+| REZA GHOOCHANNEJAD        | Iran                 |     1 |
+| ANDREAS SAMARIS           | Greece               |     1 |
+| YACINE BRAHIMI            | Algeria              |     1 |
+| JULIAN GREEN              | USA                  |     1 |
+| JOHN BROOKS               | USA                  |     1 |
+| ALEXANDER KOKORIN         | Russia               |     1 |
+| OLIVIER GIROUD            | France               |     1 |
+| BLAISE MATUIDI            | France               |     1 |
+| JUAN QUINTERO             | Columbia             |     1 |
+| MARCOS ROJO               | Argentina            |     1 |
+| SOFIANE FEGHOULI          | Algeria              |     1 |
+| DALEY BLIND               | Netherlands          |     1 |
+| LEROY FER                 | Netherlands          |     1 |
+| GEORGINIO WIJNALDUM       | Netherlands          |     1 |
+| JOEL MATIP                | Cameroon             |     1 |
+| PAUL POGBA                | France               |     1 |
+| ADMIR MEHMEDI             | Switzerland          |     1 |
+| DIVOCK ORIGI              | Belgium              |     1 |
+| FERNANDO TORRES           | Spain                |     1 |
+| PETER ODEMWINGIE          | Nigeria              |     1 |
+| WESLEY SNEIJDER           | Netherlands          |     1 |
+| BLERIM DZEMAILI           | Switzerland          |     1 |
+| ORIBE PERALTA             | Mexico               |     1 |
+| JAVIER HERNANDEZ          | Mexico               |     1 |
+| RAFAEL MARQUEZ            | Mexico               |     1 |
+| DIEGO GODIN               | Uruguay              |     1 |
+| DAVID VILLA               | Spain                |     1 |
+| KEISUKE HONDA             | Japan                |     1 |
+| FRED CHAVES GUEDES        | Brazil               |     1 |
+| JEAN BEAUSEJOUR           | Chile                |     1 |
+| FERNANDINHO LUIZ ROZA     | Brazil               |     1 |
+| XABI ALONSO               | Spain                |     1 |
+| JERMAINE JONES            | USA                  |     1 |
+| KLAAS JAN HUNTELAAR       | Netherlands          |     1 |
+| ALEKSANDR KERZHAKOV       | Russia               |     1 |
+| IVICA OLIC                | Croatia              |     1 |
+| WAYNE ROONEY              | England              |     1 |
+| SAMI KHEDIRA              | Germany              |     1 |
+| MILE JEDINAK              | Australia            |     1 |
+| PABLO ARMERO              | Columbia             |     1 |
+| CRISTIANO RONALDO         | Portugal             |     1 |
+| JORGE VALDIVIA            | Chile                |     1 |
+| GIOVANI DOS SANTOS        | Mexico               |     1 |
+| ANDRES GUARDADO           | Mexico               |     1 |
+| JAN VERTONGHEN            | Belgium              |     1 |
+| KOO JACHEOL               | South Korea          |     1 |
+| RAFIK HALLICHE            | Algeria              |     1 |
+| MATHIEU VALBUENA          | France               |     1 |
+| GEORGIOS SAMARAS          | Greece               |     1 |
+| CLAUDIO MARCHISIO         | Italy                |     1 |
+| SOKRATIS PAPASTATHOPOULOS | Greece               |     1 |
+| MIRALEM PJANIC            | Bosnia & Herzegovina |     1 |
+| EDIN DZEKO                | Bosnia & Herzegovina |     1 |
+| VEDAD IBISEVIC            | Bosnia & Herzegovina |     1 |
+| MAROUANE FELLAINI         | Belgium              |     1 |
+| THIAGO SILVA              | Brazil               |     1 |
+| SHINJI OKAZAKI            | Japan                |     1 |
+| VARELA SILVESTRE          | Portugal             |     1 |
+| NANI DA CUNHA             | Portugal             |     1 |
+| ANGEL DI MARIA            | Argentina            |     1 |
+| JUAN MATA                 | Spain                |     1 |
+| EDINSON CAVANI            | Uruguay              |     1 |
+| LEE KEUNHO                | South Korea          |     1 |
+| MARCOS URENA              | Costa Rica           |     1 |
+| EDUARDO VARGAS            | Chile                |     1 |
+| CARLO COSTLY              | Honduras             |     1 |
+| GONZALO HIGUAIN           | Argentina            |     1 |
+| MARIO BALOTELLI           | Italy                |     1 |
++---------------------------+----------------------+-------+
+116 rows in set (0.00 sec)
+
+ERROR 1048 (23000): Column 'country_name' cannot be null
+ERROR 1062 (23000): Duplicate entry 'Brazil' for key 'PRIMARY'
+ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`soccer`.`players`, CONSTRAINT `players_ibfk_1` FOREIGN KEY (`country`) REFERENCES `country` (`country_name`))
+ERROR 1451 (23000): Cannot delete or update a parent row: a foreign key constraint fails (`soccer`.`match_results`, CONSTRAINT `match_results_ibfk_1` FOREIGN KEY (`team1`) REFERENCES `country` (`country_name`))
+Query OK, 1 row affected (0.03 sec)
+
+Query OK, 1 row affected (0.02 sec)
+
+Query OK, 1 row affected (0.02 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.02 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.02 sec)
+
+Query OK, 1 row affected (0.02 sec)
+
+Query OK, 1 row affected (0.03 sec)
+
+Query OK, 1 row affected (0.02 sec)
+
+mysql> notee
